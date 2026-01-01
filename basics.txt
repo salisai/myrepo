@@ -1,0 +1,20 @@
+Git: 
+=====
+- Distributed version control system(VCS).
+- for software maintenance 
+- VCS track changes between different software versions. 
+- backup and restore. 
+- collaboration 
+- Branching and merging 
+- Tracking changes, by whom? 
+
+
+
+- configure git with username and email 
+- git config --global user.name "Paul"
+- git config --global user.email sayedalishah@..
+
+- git config --list 
+- ls -la    - show the .git folder 
+
+
