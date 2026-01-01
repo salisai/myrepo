@@ -18,3 +18,23 @@ Git:
 - ls -la    - show the .git folder 
 
 
+Staging area: 
+-------------
+When you added the files and are ready for commits - it is in staging area. 
+You have to commit after this. 
+Between commit and local stage. 
+
+git commit: 
+- captures a snapshot of the project's currently staged changes, 
+  creating a permanent record in the repository's history. 
+
+Image: See git workflow in the git-workflow.png. 
+
+Why staging: 
+- its preparation phase 
+- extra precaution 
+
+- git log   - to check is it commited. 
+- git diff  - different betweeen present and previous code. 
+
+
