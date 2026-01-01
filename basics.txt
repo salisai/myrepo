@@ -38,3 +38,112 @@ Why staging:
 - git diff  - different betweeen present and previous code. 
 
 
+Tracking versions: 
+------------------
+- How to read version 1 files? 
+- When we need to work with previous commits/or versions we need id of that previous commit. 
+- we will use 'git log' for that. 
+
+For example: I want to read version 1 files
+-------
+1. git log 
+2. copy the id of that commit 
+3. git show id_of_that_commit:file_path 
+   git show 4196d958bc6953293d8f0bd2b9c8df140f6fe11c:index.html
+
+
+
+Get old versions with git checkout: 
+-------------------------------------
+- To get the whole project
+steps:
+1. git log 
+2. copy the commit id 
+3. git checkout id -- *
+   git checkout id -- index.html 
+
+- Now how to move back to the previous used version? 
+- git checkout master -- index.html 
+
+
+Working with Git Restore: 
+--------------------------
+Negative cases: 
+
+Case 1: to undo changes get the last successful change 
+- git restore .          
+- or 
+- git restore filename 
+
+Case 2: If we added the changes using git add then 
+- git diff --cached   -- to check which changes you are to commit. 
+
+- git restore --staged index.html 
+ Now you files have came back from stagging area to working directory. 
+
+- git restore index.html 
+
+
+Case 3: Added changes to staging area(didn't commit) after this added more changes to file(like some errors etc). 
+To get the staged changes. I don't want the changes after the staging. 
+- git restore --worktree index.html 
+
+
+Case 4: How about if we did commit also wrong files: 
+- git reset --soft HEAD^ (uncommit and keep the changes)
+- git reset --hard HEAD^ (uncommit and discard the changes)
+
+- soft: only revert, changes will not disappear
+- hard: changes will also disppear. 
+
+
+GitLog: 
+----------
+- git log -p -2 (last two commit with diff)
+- git log --stat (summary of changes)
+
+- git log --pretty=online ()
+- git log --pretty=format:"%h - %an, %ar:%%s"
+ h- hash, an- author name, ar-relative to, s-string 
+
+- git log -S function_name 
+like 
+- git log -S v3
+
+
+- git log --grep="fix bug" (search commit msg)
+- git log --since="2024-01-01"
+- git log --until="2024-01-01"
+
+- git log --author="ali"  (look for ali's commits)
+- git log --no-merges   ()
+
+
+
+Remote Repo:
+-------------
+- Version that resides on a network server or a hosted respository on the internet. 
+- Your change will be lost if machine is lost or kharab hogia. 
+
+
+- history - check for files. 
+
+Flow for git push: 
+------------------
+
+Understand Git pull:
+--------------------
+- git pull 
+- git log 
+
+
+Branching and Merging: 
+----------------------
+See the BrMe.png image.
+- git branch design 
+- git branch 
+
+- git checkout design   - switch to branch design 
+
+- git log 
+- git checkout main 
