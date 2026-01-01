@@ -144,3 +144,14 @@ See the BrMe.png image.
 - git branch 
 
 - git checkout design   - switch to branch design 
+=======
+
+- git log 
+- git checkout main
+
+I am design branch, how to merge from main the commits of the design branch: 
+-----------------------------
+- git checkout main 
+>>>>>>> design
+
+
